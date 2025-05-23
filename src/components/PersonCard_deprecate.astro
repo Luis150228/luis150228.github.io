@@ -4,6 +4,22 @@ import Linkedin from './icons/Linkedin.astro';
 import Mail from './icons/Mail.astro';
 ---
 
+<script>
+	function copyEmail(element) {
+		const email = 'luis.rangeldiaz@gmail.com';
+		navigator.clipboard.writeText(email).then(() => {
+			const tooltip = element.querySelector('span');
+			tooltip.classList.remove('opacity-0');
+			tooltip.classList.add('opacity-100');
+		});
+	}
+
+	function hideTooltip(element) {
+		const tooltip = element.querySelector('span');
+		tooltip.classList.add('opacity-0');
+		tooltip.classList.remove('opacity-100');
+	}
+</script>
 <!-- Profile -->
 <div class='flex items-center gap-x-3'>
 	<div class='shrink-0'>
@@ -29,12 +45,22 @@ import Mail from './icons/Mail.astro';
 		decisiones dentro del sector bancario.
 	</p>
 
+	<p class='mt-3 text-sm text-gray-600 dark:text-neutral-400'>
+		Actualmente colaboro en el área de Tecnología de Banco Santander México, donde desarrollo aplicaciones web y
+		dashboards que monitorean el cumplimiento de SLA en incidentes y tareas. Me apasiona construir soluciones
+		funcionales, eficientes y orientadas al análisis, utilizando tecnologías como PHP, JavaScript, MySQL y React. Me
+		destaco por mi autogestión, no me conformo con “cómo no se hacen las cosas”, siempre busco respuestas, disfruto
+		aprender y asumir nuevos retos que me impulsen a mejorar cada día.
+	</p>
+
 	<ul class='mt-5 flex flex-row gap-x-3'>
 		<li class='flex items-center gap-x-2.5'>
 			<span
+				onclick='copyEmail(this)'
+				onmouseleave='hideTooltip(this)'
 				class='relative cursor-pointer bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-400 border border-gray-400'>
 				<Mail class='size-3 me-2' />
-				<span class='xs:hidden inline'>Luis Rangel Diaz</span>
+				Luis Rangel Diaz
 				<span
 					class='absolute -top-6 left-1/2 -translate-x-1/2 bg-black text-white text-[10px] px-2 py-0.5 rounded opacity-0 transition-opacity duration-300 pointer-events-none'>
 					Correo copiado
@@ -48,7 +74,7 @@ import Mail from './icons/Mail.astro';
 				rel='noopener noreferrer'
 				class='bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-400 border border-gray-400'>
 				<Linkedin class='size-3 me-2' />
-				<span>Luis Rangel Diaz</span>
+				Luis Rangel Diaz
 			</a>
 		</li>
 		<li class='flex items-center gap-x-2.5'>
@@ -58,7 +84,7 @@ import Mail from './icons/Mail.astro';
 				rel='noopener noreferrer'
 				class='bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-400 border border-gray-400'>
 				<Github class='size-3 me-2' />
-				<span>Luis150228</span>
+				Luis150228
 			</a>
 		</li>
 	</ul>
