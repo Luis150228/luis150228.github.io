@@ -1,14 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: [
-		'./src/**/*.{astro,js,jsx,ts,tsx}', // asegúrate de cubrir todos los archivos relevantes
-	],
+	content: ['./src/**/*.{astro,html,js,ts,jsx,tsx}', './node_modules/flowbite/**/*.js'],
 	theme: {
 		extend: {
 			screens: {
-				xs: { max: '598px' }, // <--- Tu breakpoint personalizado
+				xs: { max: '598px' },
 			},
 		},
 	},
-	plugins: [],
+	plugins: [require('flowbite/plugin')],
 };

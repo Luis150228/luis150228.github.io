@@ -9,10 +9,12 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
+	<Header />
+	<!-- <main class='absolute inset-0 -z-5 h-full w-full items-center px-5 py-2 [background:radial-gradient(40%_40%_at_50%_0%,#ffdd00b3,transparent_80%)]'> -->
 	<main
-		class='absolute inset-0 -z-5 h-full w-full items-center px-5 py-2 [background:radial-gradient(40%_40%_at_50%_0%,#ffdd00b3,transparent_80%)]'>
-		<Header />
+		class='relative pt-24 h-full w-full items-center px-5 py-2 [background:radial-gradient(40%_40%_at_50%_0%,#ffdd00b3,transparent_80%)]'>
 		<Welcome />
 		<Footer />
 	</main>
+	<!-- </main> -->
 </Layout>
