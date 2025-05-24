@@ -2,6 +2,8 @@
 import RangelDev from '../components/icons/rangelDev.svg';
 import MenuCircle from './icons/MenuCircle.astro';
 import MenuLines from './icons/MenuLines.astro';
+import FlagEUA from './icons/FlagEUA.astro';
+import FlagMexico from './icons/FlagMexico.astro';
 ---
 
 <header class='fixed top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm'>
@@ -56,6 +58,44 @@ import MenuLines from './icons/MenuLines.astro';
 					href='#projects'
 					>Proyectos</a
 				>
+				<button
+					type='button'
+					data-dropdown-toggle='language-dropdown-menu'
+					class='inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white'>
+					<FlagMexico class='w-5 h-5 rounded-full me-3' />
+					Español
+				</button>
+				<!-- Dropdown -->
+				<div
+					class='z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700'
+					id='language-dropdown-menu'>
+					<ul
+						class='py-2 font-medium'
+						role='none'>
+						<li>
+							<a
+								href='#es'
+								class='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white'
+								role='menuitem'>
+								<div class='inline-flex items-center'>
+									<FlagMexico class='h-3.5 w-3.5 rounded-full me-2' />
+									Español
+								</div>
+							</a>
+						</li>
+						<li>
+							<a
+								href='#en'
+								class='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white'
+								role='menuitem'>
+								<div class='inline-flex items-center'>
+									<FlagEUA class='h-3.5 w-3.5 rounded-full me-2' />
+									English
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</nav>
