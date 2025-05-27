@@ -1,0 +1,20 @@
+[
+    {
+        "href": "https://www.linkedin.com/in/luis-fernando-rangel-a70027161/",
+        "label": "Luis Rangel Diaz",
+        "color": "blue",
+        "icon": "linkedin"
+    },
+    {
+        "href": "https://github.com/Luis150228",
+        "label": "Luis150228",
+        "color": "gray",
+        "icon": "github"
+    },
+    {
+        "href": "https://github.com/Luis150228",
+        "label": "Currulum Vitae",
+        "color": "red",
+        "icon": "pdf"
+    }
+]

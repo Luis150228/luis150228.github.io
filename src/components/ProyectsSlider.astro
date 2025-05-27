@@ -1,0 +1,27 @@
+---
+import '../styles/SlideCards.css';
+import AngleLeft from './icons/AngleLeft.astro';
+import AngleRight from './icons/AngleRight.astro';
+import CardProjectFlow from './CardProjectFlow.astro';
+import SliderCards from './scripts/SliderCards.astro';
+import projects from '../data/projects.json';
+---
+
+<div class='slider'>
+	{
+		projects.map((project) => (
+			<CardProjectFlow
+				title={project.title}
+				description={project.description}
+				image={project.image}
+				link={project.link}
+				tags={project.tags}
+			/>
+		))
+	}
+	<div class='buttons-slider'>
+		<button id='next'><AngleLeft /></button>
+		<button id='prev'><AngleRight /></button>
+	</div>
+	<SliderCards client:load />
+</div>

@@ -1,0 +1,26 @@
+---
+import Badge from './Badge.astro';
+import Github from './icons/Github.astro';
+import Linkedin from './icons/Linkedin.astro';
+import socialLinks from '../data/social-links.json';
+
+const iconMap = {
+	github: Github,
+	linkedin: Linkedin,
+};
+---
+
+{
+	socialLinks.map(({ href, color, icon: Icon }) => (
+		<div class='flex items-center gap-x-2.5'>
+			<a
+				href={href}
+				target='_blank'
+				rel='noopener noreferrer'>
+				<Badge class={color}>
+					<Icon class='size-3 me-2' />
+				</Badge>
+			</a>
+		</div>
+	))
+}

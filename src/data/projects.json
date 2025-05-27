@@ -1,0 +1,68 @@
+[
+    {
+        "title": "Guardians Of The Galaxy",
+        "description": "A group of intergalactic criminals must pull together to stop a fanatical warrior...",
+        "image": "/imgs/guardians-of-the-galaxy.jpg",
+        "link": "/imgs/guardians-of-the-galaxy.jpg",
+        "tags": [
+            "Action",
+            "Adventure",
+            "Comedy"
+        ]
+    },
+    {
+        "title": "Doctor Strange",
+        "description": "America Chavez and a version of Stephen Strange are chased by a demon...",
+        "image": "/imgs/dr-strange.jpg",
+        "link": "/imgs/dr-strange.jpg",
+        "tags": [
+            "Action",
+            "Fantasy",
+            "Adventure"
+        ]
+    },
+    {
+        "title": "Eternals",
+        "description": "A group of ancient aliens come together to protect humanity.",
+        "image": "/imgs/eternals.jpg",
+        "link": "/imgs/eternals.jpg",
+        "tags": [
+            "Action",
+            "Fantasy",
+            "Adventure"
+        ]
+    },
+    {
+        "title": "Spider-Man",
+        "description": "Peter Parker, a high school student, gains spider-like abilities and fights crime.",
+        "image": "/imgs/spider-man.jpg",
+        "link": "/imgs/spider-man.jpg",
+        "tags": [
+            "Action",
+            "Fantasy",
+            "Adventure"
+        ]
+    },
+    {
+        "title": "Justice League",
+        "description": "Batman, Wonder Woman, Aquaman, Cyborg, and The Flash team up to save the world.",
+        "image": "/imgs/justice-league.jpg",
+        "link": "",
+        "tags": [
+            "Action",
+            "Adventure",
+            "Drama"
+        ]
+    },
+    {
+        "title": "Thor: Ragnarok",
+        "description": "Thor must escape the alien planet Sakaar in time to save Asgard from Hela.",
+        "image": "/imgs/thor-ragnarok.jpg",
+        "link": "/imgs/thor-ragnarok.jpg",
+        "tags": [
+            "Action",
+            "Adventure",
+            "Comedy"
+        ]
+    }
+]

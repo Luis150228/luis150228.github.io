@@ -1,0 +1,33 @@
+---
+import Badge from './Badge.astro';
+import Github from './icons/Github.astro';
+import Linkedin from './icons/Linkedin.astro';
+import PdfIcon from './icons/PdfIcon.astro';
+import socialLinksData from '../data/social-links.json';
+import type { IconName } from '../types/social';
+
+const iconMap: Record<IconName, any> = {
+	github: Github,
+	linkedin: Linkedin,
+	pdf: PdfIcon,
+};
+---
+
+{
+	socialLinksData.map(({ href, label, color, icon }) => {
+		const Icon = iconMap[icon as IconName];
+		return (
+			<li class='flex items-center gap-x-2.5'>
+				<a
+					href={href}
+					target='_blank'
+					rel='noopener noreferrer'>
+					<Badge class={color}>
+						<Icon class='size-3 me-2' />
+						<span>{label}</span>
+					</Badge>
+				</a>
+			</li>
+		);
+	})
+}

@@ -1,0 +1,33 @@
+.slider {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 670px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    -webkit-user-drag: none;
+    touch-action: pan-y;
+}
+
+.item {
+    position: absolute;
+    padding: 20px;
+    transition: transform 0.4s ease, opacity 0.5s ease, filter 0.5s ease;
+    will-change: transform;
+    /* left: 50%;
+    transform: translateX(-50%); */
+}
+
+.buttons-slider{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons-slider button{
+    cursor: pointer;
+}

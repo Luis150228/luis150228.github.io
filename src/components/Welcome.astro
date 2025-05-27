@@ -1,6 +1,7 @@
 ---
 import PersonCard from './PersonCard.astro';
 import Proyects from './Proyects.astro';
+import ProyectsSlider from './ProyectsSlider.astro';
 import Experience from './Experience.astro';
 
 // import astroLogo from '../assets/astro.svg';
@@ -18,11 +19,13 @@ import Experience from './Experience.astro';
 	<section
 		class='p-16'
 		id='experience'>
+		<h1 class='text-3xl font-bold pb-4'>Experience</h1>
 		<Experience />
 	</section>
 	<section
 		class='p-16'
-		id='projects'>
-		<Proyects />
+		id='projects-slider'>
+		<h1 class='text-3xl font-bold pb-4'>Projects</h1>
+		<ProyectsSlider />
 	</section>
 </div>

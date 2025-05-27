@@ -1,7 +1,8 @@
 ---
-import Github from './icons/Github.astro';
-import Linkedin from './icons/Linkedin.astro';
+import Badge from './Badge.astro';
 import Mail from './icons/Mail.astro';
+import TooltipController from './scripts/TooltipController.astro';
+import SocialNetwork from './SocialNetwork.astro';
 ---
 
 <!-- Profile -->
@@ -24,57 +25,39 @@ import Mail from './icons/Mail.astro';
 <!-- About -->
 <div class='mt-8'>
 	<p class='text-sm text-gray-600 dark:text-neutral-400'>
-		Soy un desarrollador web con más de 10 años de experiencia en tecnologías de la información, especializado en la
-		creación de herramientas internas que automatizan procesos, analizan datos operativos y facilitan la toma de
-		decisiones dentro del sector bancario.
+		Más de 10 años de experiencia en tecnologías de la información, especializado en la creación de herramientas
+		internas que automatizan procesos, análisis de datos operativos para facilitar la toma de decisiones.
 	</p>
 
 	<ul class='mt-5 gap-3 flex flex-col xl:flex-row xl:gap-x-5'>
 		<li>
 			<div class='relative inline-block'>
 				<button
+					id='tooltipBtn'
 					data-tooltip-target='tooltip-click'
 					data-tooltip-trigger='click'
-					type='button'
-					class='cursor-pointer bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-400 border border-gray-400'>
-					<Mail class='size-3 me-2' />
-					<span>Luis Rangel Diaz btn</span>
+					type='button'>
+					<Badge class='yellow'>
+						<Mail class='size-3 me-2' />
+						<span>Luis Rangel Diaz</span>
+					</Badge>
 				</button>
 
 				<div
 					id='tooltip-click'
 					role='tooltip'
 					class='absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700'>
-					Tooltip content
+					Correo copiado
 					<div
 						class='tooltip-arrow'
 						data-popper-arrow>
 					</div>
 				</div>
+				<TooltipController client:load />
 			</div>
 		</li>
-
-		<li class='flex items-center gap-x-2.5'>
-			<a
-				href='https://www.linkedin.com/in/luis-fernando-rangel-a70027161/'
-				target='_blank'
-				rel='noopener noreferrer'
-				class='bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-400 border border-gray-400'>
-				<Linkedin class='size-3 me-2' />
-				<span>Luis Rangel Diaz</span>
-			</a>
-		</li>
-		<li class='flex items-center gap-x-2.5'>
-			<a
-				href='https://github.com/Luis150228'
-				target='_blank'
-				rel='noopener noreferrer'
-				class='bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-gray-400 border border-gray-400'>
-				<Github class='size-3 me-2' />
-				<span>Luis150228</span>
-			</a>
-		</li>
+		<SocialNetwork />
 	</ul>
-</div>
 
-<!-- End About -->
+	<!-- End About -->
+</div>
