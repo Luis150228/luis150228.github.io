@@ -1,0 +1,159 @@
+<canvas id='canvas1'></canvas>
+
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	#canvas1 {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: radial-gradient(#ffde00, #2b2d3d);
+		z-index: -10;
+		pointer-events: none; /* importante para que no bloquee clicks */
+	}
+</style>
+
+<script type='module'>
+	const canvas = document.getElementById('canvas1');
+	const ctx = canvas.getContext('2d');
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
+
+	let particlesArray;
+
+	//Mouse position
+
+	let mouse = {
+		x: null,
+		y: null,
+		radius: (canvas.height / 80) * (canvas.width / 80),
+	};
+
+	window.addEventListener('mousemove', function (e) {
+		mouse.x = e.x;
+		mouse.y = e.y;
+	});
+
+	//Crear Particulas
+	class Particle {
+		constructor(x, y, direcctionX, direcctionY, size, color) {
+			this.x = x;
+			this.y = y;
+			this.direcctionX = direcctionX;
+			this.direcctionY = direcctionY;
+			this.size = size;
+			this.color = color;
+		}
+		//Metodo para dibujar una particula
+		draw() {
+			ctx.beginPath();
+			ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+			ctx.fillStyle = '#383838';
+			ctx.fill();
+		}
+		//Validar posicion de la particula y del mouse; moviemiento de la particula y dibujarla
+		update() {
+			//check if particle is still whithin canvas
+			if (this.x > canvas.width || this.x < 0) {
+				this.direcctionX = -this.direcctionX;
+			}
+			if (this.y > canvas.width || this.y < 0) {
+				this.direcctionY = -this.direcctionY;
+			}
+
+			//Colision de particulas - posicion de mouse / particula posicion
+			let dx = mouse.x - this.x;
+			let dy = mouse.y - this.y;
+			let distance = Math.sqrt(dx * dx + dy * dy);
+			if (distance < mouse.radius + this.size) {
+				if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
+					this.x += 10;
+				}
+				if (mouse.x < this.x && this.x < this.size * 10) {
+					this.x -= 10;
+				}
+				if (mouse.y < this.y && this.y < canvas.height - this.size * 10) {
+					this.y += 10;
+				}
+				if (mouse.y < this.y && this.y < this.size * 10) {
+					this.y -= 10;
+				}
+			}
+			//Mover Particulas
+			this.x += this.direcctionX;
+			this.y += this.direcctionY;
+			//Dibujar Partuculas
+			this.draw();
+		}
+	}
+
+	//Crear arreglo de particulas
+	function init() {
+		particlesArray = [];
+		let numberOfParticles = (canvas.height * canvas.width) / 8000;
+		for (let i = 0; i < numberOfParticles; i++) {
+			let size = Math.random() * 5 + 1;
+			let x = Math.random() * (innerWidth - size * 2) - size * 2 + size * 2;
+			let y = Math.random() * (innerHeight - size * 2) - size * 2 + size * 2;
+			let direcctionX = Math.random() * 5 - 2.5;
+			let direcctionY = Math.random() * 5 - 2.5;
+			let color = '#383838';
+
+			particlesArray.push(new Particle(x, y, direcctionX, direcctionY, size, color));
+		}
+	}
+
+	//Crear lineas de conexion de particulas
+	function connect() {
+		let opacityValue = 1;
+		for (let a = 0; a < particlesArray.length; a++) {
+			for (let b = a; b < particlesArray.length; b++) {
+				let distance =
+					(particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x) +
+					(particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y);
+				if (distance < (canvas.width / 7) * (canvas.height / 7)) {
+					opacityValue = 1 - distance / 15000;
+					ctx.strokeStyle = 'rgba(54, 54, 54, ' + opacityValue + ')';
+					ctx.lineWidth = 1;
+					ctx.beginPath();
+					ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+					ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+					ctx.stroke();
+				}
+			}
+		}
+	}
+
+	//Loop de animacion
+	function animate() {
+		requestAnimationFrame(animate);
+		ctx.clearRect(0, 0, innerWidth, innerHeight);
+		for (let i = 0; i < particlesArray.length; i++) {
+			particlesArray[i].update();
+		}
+		connect();
+	}
+
+	//ajustar a tamaño de ventana
+	window.addEventListener('resize', function () {
+		canvas.width = innerWidth;
+		canvas.height = innerHeight;
+		mouse.radius = (canvas.height / 90) * (canvas.height / 90);
+		init();
+	});
+
+	//Salida del mouse
+	window.addEventListener('mouseout', function () {
+		mouse.x = undefined;
+		mouse.x = undefined;
+	});
+
+	init();
+	animate();
+</script>

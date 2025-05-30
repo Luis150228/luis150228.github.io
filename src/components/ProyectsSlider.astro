@@ -7,18 +7,18 @@ import SliderCards from './scripts/SliderCards.astro';
 import projects from '../data/projects.json';
 ---
 
-<div class='slider'>
+<div class='slider card-section'>
 	{
 		projects.map((project) => (
-		<div class='item'>
-			<CardProjectFlow
-				title={project.title}
-				description={project.description}
-				image={project.image}
-				link={project.link}
-				tags={project.tags}
-			/>
-		</div>
+			<div class='item'>
+				<CardProjectFlow
+					title={project.title}
+					description={project.description}
+					image={project.image}
+					link={project.link}
+					tags={project.tags}
+				/>
+			</div>
 		))
 	}
 	<div class='buttons-slider'>

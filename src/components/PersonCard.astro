@@ -5,59 +5,55 @@ import TooltipController from './scripts/TooltipController.astro';
 import SocialNetwork from './SocialNetwork.astro';
 ---
 
-<!-- Profile -->
-<div class='flex items-center gap-x-3'>
-	<div class='shrink-0'>
-		<img
-			class='shrink-0 size-32 rounded-full'
-			src='/perfilFotoFrente.png'
-			alt='Avatar'
-		/>
+<div class='card-section'>
+	<div class='card-perfil'>
+		<div class='shrink-0'>
+			<img
+				class='shrink-0 size-32 rounded-full'
+				src='/perfilFotoFrente.png'
+				alt='Avatar'
+			/>
+		</div>
+
+		<div class='grow'>
+			<h1 class='text-lg font-medium'>Luis Rangel Diaz</h1>
+			<p class='text-sm'>Web designer/developer, administrative manager</p>
+		</div>
 	</div>
+	<div class='mt-8'>
+		<p class='text-sm'>
+			Más de 10 años de experiencia en tecnologías de la información, especializado en la creación de herramientas
+			internas que automatizan procesos, análisis de datos operativos para facilitar la toma de decisiones.
+		</p>
 
-	<div class='grow'>
-		<h1 class='text-lg font-medium text-gray-800 dark:text-neutral-200'>Luis Rangel Diaz</h1>
-		<p class='text-sm text-gray-600 dark:text-neutral-400'>Web designer/developer, administrative manager</p>
-	</div>
-</div>
-<!-- End Profile -->
+		<ul class='mt-5 gap-3 flex flex-col xl:flex-row xl:gap-x-5'>
+			<li>
+				<div class='relative inline-block'>
+					<button
+						id='tooltipBtn'
+						data-tooltip-target='tooltip-click'
+						data-tooltip-trigger='click'
+						type='button'>
+						<Badge class='yellow'>
+							<Mail class='size-3 me-2' />
+							<span>Luis Rangel Diaz</span>
+						</Badge>
+					</button>
 
-<!-- About -->
-<div class='mt-8'>
-	<p class='text-sm text-gray-600 dark:text-neutral-400'>
-		Más de 10 años de experiencia en tecnologías de la información, especializado en la creación de herramientas
-		internas que automatizan procesos, análisis de datos operativos para facilitar la toma de decisiones.
-	</p>
-
-	<ul class='mt-5 gap-3 flex flex-col xl:flex-row xl:gap-x-5'>
-		<li>
-			<div class='relative inline-block'>
-				<button
-					id='tooltipBtn'
-					data-tooltip-target='tooltip-click'
-					data-tooltip-trigger='click'
-					type='button'>
-					<Badge class='yellow'>
-						<Mail class='size-3 me-2' />
-						<span>Luis Rangel Diaz</span>
-					</Badge>
-				</button>
-
-				<div
-					id='tooltip-click'
-					role='tooltip'
-					class='absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700'>
-					Correo copiado
 					<div
-						class='tooltip-arrow'
-						data-popper-arrow>
+						id='tooltip-click'
+						role='tooltip'
+						class='absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700'>
+						Correo copiado
+						<div
+							class='tooltip-arrow'
+							data-popper-arrow>
+						</div>
 					</div>
+					<TooltipController client:load />
 				</div>
-				<TooltipController client:load />
-			</div>
-		</li>
-		<SocialNetwork />
-	</ul>
-
-	<!-- End About -->
+			</li>
+			<SocialNetwork />
+		</ul>
+	</div>
 </div>
