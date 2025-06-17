@@ -4,31 +4,10 @@
 	xmlns='http://www.w3.org/2000/svg'
 	viewBox='0 0 809.29 70.45'
 	><defs>
-		<linearGradient
-			id='lettersFill'
-			x1='100%'
-			y1='0%'
-			x2='0%'
-			y2='100%'
-			gradientUnits='userSpaceOnUse'>
-			<stop
-				id='stop1'
-				offset='0%'
-				stop-color='#c51617'
-				stop-opacity='1'
-			></stop>
-			<stop
-				id='stop2'
-				offset='0%'
-				stop-color='#c51617'
-				stop-opacity='0'
-			></stop>
-		</linearGradient>
-
 		<style>
 			.b {
-				fill: url(#lettersFill) !important;
-				stroke: #c51617 !important;
+				fill: transparent !important;
+				stroke: #ffde00 !important;
 				stroke-miterlimit: 30;
 			}
 		</style>
@@ -102,60 +81,17 @@
 </svg>
 
 <script type='module' is:inline>
-	const strokeLettersAnimated = (miliseg = 0.1) => {
+	window.addEventListener('DOMContentLoaded', () => {
 		const paths = document.querySelectorAll('#nameDev path');
 		for (const [i, path] of paths.entries()) {
 			const lengthLetter = path.getTotalLength();
-			const animationDelay = (i + 1) * miliseg;
+			const animationDelay = (i + 1) * 0.3 * 1000;
 			path.style.strokeDasharray = lengthLetter;
 			path.style.strokeDashoffset = lengthLetter;
-			path.style.transition = `stroke-dashoffset ${miliseg}s ease-in-out`;
+			path.style.transition = `stroke-dashoffset 0.3s ease-in-out`;
 			setTimeout(() => {
 				path.style.strokeDashoffset = '0';
-			}, animationDelay * 1000);
+			}, animationDelay);
 		}
-		return paths.length * miliseg * 1000; // <- retorna duración total en ms
-	};
-
-	const gradientAnimated = () => {
-		const stop1 = document.querySelector('#stop1');
-		const stop2 = document.querySelector('#stop2');
-		let progress = 0;
-		const duration = 2000; // duración total del gradiente en ms
-		const startTime = performance.now();
-
-		const animate = (time) => {
-			const elapsed = time - startTime;
-			progress = Math.min(elapsed / duration, 1);
-			const offsetValue = (progress * 100).toFixed(1) + '%';
-			stop1.setAttribute('offset', offsetValue);
-			stop2.setAttribute('offset', offsetValue);
-
-			if (progress < 1) {
-				requestAnimationFrame(animate);
-			}
-		};
-
-		requestAnimationFrame(animate);
-	};
-
-	window.addEventListener('DOMContentLoaded', () => {
-		const totalStrokeTime = strokeLettersAnimated(2.3);
-		setTimeout(() => {
-			requestAnimationFrame(gradientAnimated);
-		}, totalStrokeTime);
 	});
-
-	// window.addEventListener('load', () => {
-	// 	const totalStrokeTime = strokeLettersAnimated(2.3);
-	// 	setTimeout(gradientAnimated, totalStrokeTime);
-	// });
-
-	// document.addEventListener('DOMContentLoaded', () => {
-	// 	const totalStrokeTime = strokeLettersAnimated(0.3);
-	// 	setTimeout(gradientAnimated, totalStrokeTime);
-	// });
-
-	// const totalStrokeTime = strokeLettersAnimated(0.3);
-	// setTimeout(gradientAnimated, totalStrokeTime);
 </script>
