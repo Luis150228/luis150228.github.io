@@ -56,3 +56,8 @@ body {
     align-items: center;
     flex-wrap: wrap;
 }
+
+.texto-rangel {
+    height: 650px;
+    width: 650px;
+}
