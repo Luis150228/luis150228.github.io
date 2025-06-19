@@ -81,17 +81,35 @@
 </svg>
 
 <script type='module' is:inline>
-	window.addEventListener('DOMContentLoaded', () => {
+	const strokeLettersAnimated = (miliseg = 0.1) => {
 		const paths = document.querySelectorAll('#nameDev path');
 		for (const [i, path] of paths.entries()) {
 			const lengthLetter = path.getTotalLength();
-			const animationDelay = (i + 1) * 0.3 * 1000;
+			const animationDelay = (i + 1) * miliseg;
 			path.style.strokeDasharray = lengthLetter;
 			path.style.strokeDashoffset = lengthLetter;
-			path.style.transition = `stroke-dashoffset 0.3s ease-in-out`;
+			path.style.transition = `stroke-dashoffset ${miliseg}s ease-in-out`;
 			setTimeout(() => {
 				path.style.strokeDashoffset = '0';
-			}, animationDelay);
+			}, animationDelay * 500);
 		}
+		return paths.length * miliseg * 500; // <- retorna duración total en ms
+	};
+
+	window.addEventListener('DOMContentLoaded', () => {
+		strokeLettersAnimated(0.3);
 	});
+
+	// window.addEventListener('load', () => {
+	// 	const totalStrokeTime = strokeLettersAnimated(2.3);
+	// 	setTimeout(gradientAnimated, totalStrokeTime);
+	// });
+
+	// document.addEventListener('DOMContentLoaded', () => {
+	// 	const totalStrokeTime = strokeLettersAnimated(0.3);
+	// 	setTimeout(gradientAnimated, totalStrokeTime);
+	// });
+
+	// const totalStrokeTime = strokeLettersAnimated(0.3);
+	// setTimeout(gradientAnimated, totalStrokeTime);
 </script>

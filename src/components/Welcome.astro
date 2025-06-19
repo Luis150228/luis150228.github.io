@@ -1,25 +1,12 @@
 ---
 import PersonCard from './PersonCard.astro';
-// import Proyects from './Proyects.astro';
 import ProyectsSlider from './ProyectsSlider.astro';
 import Experience from './Experience.astro';
-import CardProjectFlow from './CardProjectFlow.astro';
-
-const dataCard = [
-	{
-		title: 'Contact Center Santander',
-		description: 'Grupo Santander, capacidad para 2000 posiciones para la atencion a clientes...',
-		image:
-			'https://media.licdn.com/dms/image/v2/C4E22AQHeeZb4nltO7g/feedshare-shrink_800/feedshare-shrink_800/0/1678730402011?e=2147483647&v=beta&t=wGZr5K5txFA6wpAECl7oQouJj8l92D586_CJu7GxqCM',
-		link: '/imgs/guardians-of-the-galaxy.jpg',
-		tags: ['Call Center', 'Queretaro', 'Technology'],
-	},
-];
 ---
 
 <div
 	id='container'
-	class='pt-24'>
+	class='pt-[var(--header-height,6rem)]'>
 	<section
 		class='p-16'
 		id='about'>
@@ -30,25 +17,16 @@ const dataCard = [
 		id='experience'>
 		<div class='flex items-center gap-4 pb-6'>
 			<div class='w-2 h-10 bg-[#C51617] rounded'></div>
-			<h1 class='text-5xl font-extrabold text-white drop-shadow-lg'>Experience</h1>
+			<h2 class='text-5xl font-extrabold text-white drop-shadow-lg'>Experience</h2>
 		</div>
 		<Experience />
 	</section>
-	<!-- <section class='p-16 w-[400px] mx-auto'>
-		<CardProjectFlow
-			title={dataCard[0].title}
-			description={dataCard[0].description}
-			image={dataCard[0].image}
-			link={dataCard[0].link}
-			tags={dataCard[0].tags}
-		/>
-	</section> -->
 	<section
 		class='p-16'
 		id='projects-slider'>
 		<div class='flex items-center gap-4 pb-6'>
 			<div class='w-2 h-10 bg-[#C51617] rounded'></div>
-			<h1 class='text-5xl font-extrabold text-white drop-shadow-lg'>Projects</h1>
+			<h2 class='text-5xl font-extrabold text-white drop-shadow-lg'>Projects</h2>
 		</div>
 		<ProyectsSlider />
 	</section>
