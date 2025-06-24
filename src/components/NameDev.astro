@@ -1,3 +1,7 @@
+---
+// Este componente puede contener tu SVG o lo que tengas pensado mostrar
+---
+
 <svg
 	id='nameDev'
 	class={Astro.props.class}
@@ -93,23 +97,10 @@
 				path.style.strokeDashoffset = '0';
 			}, animationDelay * 500);
 		}
-		return paths.length * miliseg * 500; // <- retorna duración total en ms
+		return paths.length * miliseg * 500;
 	};
 
 	window.addEventListener('DOMContentLoaded', () => {
 		strokeLettersAnimated(0.3);
 	});
-
-	// window.addEventListener('load', () => {
-	// 	const totalStrokeTime = strokeLettersAnimated(2.3);
-	// 	setTimeout(gradientAnimated, totalStrokeTime);
-	// });
-
-	// document.addEventListener('DOMContentLoaded', () => {
-	// 	const totalStrokeTime = strokeLettersAnimated(0.3);
-	// 	setTimeout(gradientAnimated, totalStrokeTime);
-	// });
-
-	// const totalStrokeTime = strokeLettersAnimated(0.3);
-	// setTimeout(gradientAnimated, totalStrokeTime);
 </script>
