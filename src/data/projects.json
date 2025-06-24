@@ -1,71 +1,63 @@
 [
     {
-        "title": "Guardians Of The Galaxy",
-        "description": "A group of intergalactic criminals must pull together to stop a fanatical warrior...",
-        "image": "/imgs/guardians-of-the-galaxy.jpg",
-        "link": "/imgs/guardians-of-the-galaxy.jpg",
+        "title": "Clone Frontend de Instagram",
+        "description": "Diseño y desarrollo de un clon del frontend de Instagram utilizando React, Tailwind CSS y Vite.",
+        "image": "/imgs/cloneInstagramRangelDev.jpg",
+        "link": "https://luis150228.github.io/cloneInstagramRangelDev.github.io/",
         "tags": [
-            "Action",
-            "Adventure",
-            "Comedy"
+            "Tailwind CSS",
+            "React",
+            "Zustand",
+            "Vite"
         ]
     },
     {
-        "title": "CTOS Queretaro",
-        "description": "America Chavez and a version of Stephen Strange are chased by a demon...",
-        "image": "https://www.informador.mx/__export/1506024731941/sites/elinformador/img/historico/0/491660.jpg_1970638775.jpg",
-        "link": "https://www.informador.mx/Mexico/Edificio-verde-Santander-solucion-ecologica-20101121-0171.html",
+        "title": "Quizz RangelDev",
+        "description": "Juego de Preguntas y respuestas de temas variados",
+        "image": "/imgs/quizzrangeldev.jpg",
+        "link": "https://luis150228.github.io/quizzrangeldev.github.io/",
         "tags": [
-            "Queretaro",
-            "Technology",
-            "ECO Energy",
-            "2100 employed"
+            "Vite",
+            "Typescript",
+            "JavaScript",
+            "Zustand"
         ]
     },
     {
-        "title": "Contact Center Santander",
-        "description": "Grupo Santander, capacidad para 2000 posiciones para la atencion a clientes...",
-        "image": "https://media.licdn.com/dms/image/v2/C4E22AQHeeZb4nltO7g/feedshare-shrink_800/feedshare-shrink_800/0/1678730402011?e=2147483647&v=beta&t=wGZr5K5txFA6wpAECl7oQouJj8l92D586_CJu7GxqCM",
+        "title": "Administrador de Reportes para EUT (Grupo Santander)",
+        "description": "Sistema para generar reportes de forma automatica para EUT (Grupo Santander) SDK y CAU. Backend en PHP y Laravel, Frontend en JavaScript y Bootstrap, base de datos MySQL.",
+        "image": "/imgs/quizzrangeldev.jpg",
         "link": "https://www.lamela.com/proyectos/contact-center-para-banco-santander/",
         "tags": [
-            "Call Center",
-            "Queretaro",
-            "2000 employed"
+            "PHP",
+            "Laravel",
+            "JavaScript",
+            "Bootstrap",
+            "Mysql"
         ]
     },
     {
-        "title": "Distrito Santander",
-        "description": "Distrito Santander Querétaro se encuentra ubicado junto al Contact Center, permitirá conjuntar diferentes áreas operativas y de bancas de negocio.",
-        "image": "https://www.liderempresarial.com/wp-content/uploads/2022/06/Distrito-Quere%CC%81taro-1140x570.jpg",
-        "link": "https://inmobiliare.com/santander-inaugura-su-nuevo-corporativo-distrito-queretaro/",
+        "title": "Sistema Control de Telefonia Movil",
+        "description": "Grupo Santander Mexico, sistema para el control de lineas telefonicas moviles de la empresa. Backend en PHP y Laravel, Frontend en JavaScript y Bootstrap, base de datos MySQL.",
+        "image": "/imgs/quizzrangeldev.jpg",
+        "link": "https://www.lamela.com/proyectos/contact-center-para-banco-santander/",
         "tags": [
-            "Queretaro",
-            "Bussines",
-            "Technology",
-            "ECO Energy",
-            "2600 employed"
+            "PHP",
+            "Laravel",
+            "JavaScript",
+            "Bootstrap",
+            "Mysql"
         ]
     },
     {
-        "title": "Justice League",
-        "description": "Batman, Wonder Woman, Aquaman, Cyborg, and The Flash team up to save the world.",
-        "image": "/imgs/justice-league.jpg",
-        "link": "",
+        "title": "Sistema Control de Inventarios",
+        "description": "Grupo Santander Mexico, sistema para el control de activos de la empresa.",
+        "image": "/imgs/quizzrangeldev.jpg",
+        "link": "https://www.lamela.com/proyectos/contact-center-para-banco-santander/",
         "tags": [
-            "Action",
-            "Adventure",
-            "Drama"
-        ]
-    },
-    {
-        "title": "Thor: Ragnarok",
-        "description": "Thor must escape the alien planet Sakaar in time to save Asgard from Hela.",
-        "image": "/imgs/thor-ragnarok.jpg",
-        "link": "/imgs/thor-ragnarok.jpg",
-        "tags": [
-            "Action",
-            "Adventure",
-            "Comedy"
+            "PHP",
+            "JavaScript",
+            "Mysql"
         ]
     }
 ]
