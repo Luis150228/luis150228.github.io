@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 
 		button.addEventListener('mouseleave', () => {
-			console.log('object');
 			setTimeout(() => {
 				tooltip.classList.remove('visible', 'opacity-100');
 				tooltip.classList.add('invisible', 'opacity-0');
