@@ -12,16 +12,19 @@ import imageDev from '../assets/images/FherYellow3_4.png';
 			<img
 				class='image-avatar'
 				src={imageDev.src}
-				alt='Avatar'
+				alt='Avatar of Luis Rangel Diaz, web designer/developer, administrative manager'
 			/>
 		</div>
 
 		<div class='grow'>
 			<NameDevBeta class='h-12' />
-			<script
-				type='module'
-				src='/js/namedev-controller.js'
-			></script>
+			<script type='module'>
+				import { strokeLettersAnimated } from './scripts/namedev-controller.js';
+
+				window.addEventListener('DOMContentLoaded', () => {
+					strokeLettersAnimated(0.3);
+				});
+			</script>
 			<div>NameDev Component</div>
 			<p class='text-m'>Web designer/developer, administrative manager</p>
 		</div>
