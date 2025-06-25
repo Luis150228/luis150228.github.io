@@ -3,7 +3,7 @@ import '../styles/SlideCards.css';
 import AngleLeft from './icons/AngleLeft.astro';
 import AngleRight from './icons/AngleRight.astro';
 import CardProjectFlow from './CardProjectFlow.astro';
-import SliderCards from './scripts/SliderCards.astro';
+// import SliderCards from './scripts/SliderCards.astro';
 import projects from '../data/projects.json';
 ---
 
@@ -25,8 +25,8 @@ import projects from '../data/projects.json';
 		<button id='next'><AngleLeft /></button>
 		<button id='prev'><AngleRight /></button>
 	</div>
-	<SliderCards client:load />
+	<script
+		type='module'
+		src='/js/slider-cards.js'
+	></script>
 </div>
-
-
-

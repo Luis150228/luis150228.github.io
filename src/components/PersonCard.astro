@@ -1,8 +1,7 @@
 ---
 import Badge from './Badge.astro';
 import Mail from './icons/Mail.astro';
-// import NameDevBeta from './NameDevBeta.astro';
-import TooltipController from './scripts/TooltipController.astro';
+import NameDevBeta from './NameDevBeta.astro';
 import SocialNetwork from './SocialNetwork.astro';
 ---
 
@@ -17,10 +16,11 @@ import SocialNetwork from './SocialNetwork.astro';
 		</div>
 
 		<div class='grow'>
-			<!-- <NameDevBeta
-				client:load
-				class='h-12'
-			/> -->
+			<NameDevBeta class='h-12' />
+			<script
+				type='module'
+				src='/js/namedev-controller.js'
+			></script>
 			<div>NameDev Component</div>
 			<p class='text-m'>Web designer/developer, administrative manager</p>
 		</div>
@@ -55,7 +55,11 @@ import SocialNetwork from './SocialNetwork.astro';
 							data-popper-arrow>
 						</div>
 					</div>
-					<TooltipController client:load />
+					<!-- <TooltipController client:load /> -->
+					<script
+						type='module'
+						src='/js/tool-tip-controller.js'
+					></script>
 				</div>
 			</li>
 			<SocialNetwork />

@@ -1,7 +1,3 @@
----
-
----
-
 <svg
 	id='nameDev'
 	class={Astro.props.class}
@@ -84,23 +80,3 @@
 		d='m806.16,26.97c-.95,1.04-2.21,2.52-3.78,4.42-1.56,1.9-3.24,4.01-5.03,6.33-1.79,2.31-3.58,4.74-5.38,7.28-1.79,2.54-3.37,4.97-4.73,7.28h19.46v5.31h-27.01v-4.22c1.09-2,2.43-4.19,4.01-6.6,1.59-2.4,3.25-4.8,5-7.18,1.75-2.38,3.45-4.63,5.1-6.74,1.66-2.11,3.1-3.89,4.32-5.34h-17.48v-5.31h25.51v4.76Z'
 	></path>
 </svg>
-<script type='module' is:inline>
-	const strokeLettersAnimated = (miliseg = 0.1) => {
-		const paths = document.querySelectorAll('#nameDev path');
-		for (const [i, path] of paths.entries()) {
-			const lengthLetter = path.getTotalLength();
-			const animationDelay = (i + 1) * miliseg;
-			path.style.strokeDasharray = lengthLetter;
-			path.style.strokeDashoffset = lengthLetter;
-			path.style.transition = `stroke-dashoffset ${miliseg}s ease-in-out`;
-			setTimeout(() => {
-				path.style.strokeDashoffset = '0';
-			}, animationDelay * 500);
-		}
-		return paths.length * miliseg * 500;
-	};
-
-	window.addEventListener('DOMContentLoaded', () => {
-		strokeLettersAnimated(0.3);
-	});
-</script>
