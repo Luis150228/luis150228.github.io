@@ -27,7 +27,7 @@
         "title": "Administrador de Reportes para EUT (Grupo Santander)",
         "description": "Sistema para generar reportes de forma automatica para EUT (Grupo Santander) SDK y CAU. Backend en PHP y Laravel, Frontend en JavaScript y Bootstrap, base de datos MySQL.",
         "image": "/imgs/capturaPantallaReportes.png",
-        "link": "https://www.lamela.com/proyectos/contact-center-para-banco-santander/",
+        "link": "https://player.cloudinary.com/embed/?cloud_name=fher4729rangel&public_id=fsvcryo5l7fbis4dzpbv&profile=cld-default",
         "tags": [
             "PHP",
             "Laravel",
@@ -40,7 +40,7 @@
         "title": "Sistema Control de Telefonia Movil",
         "description": "Grupo Santander Mexico, sistema para el control de lineas telefonicas moviles de la empresa. Backend en PHP y Laravel, Frontend en JavaScript y Bootstrap, base de datos MySQL.",
         "image": "/imgs/capturaPantallaMovil.png",
-        "link": "https://www.lamela.com/proyectos/contact-center-para-banco-santander/",
+        "link": "https://player.cloudinary.com/embed/?cloud_name=fher4729rangel&public_id=iov9qakf6g2c5ix2s40e&profile=cld-default",
         "tags": [
             "PHP",
             "Laravel",
@@ -53,7 +53,7 @@
         "title": "Sistema Control de Inventarios",
         "description": "Grupo Santander Mexico, sistema para el control de activos de la empresa.",
         "image": "/imgs/capturaPantallaInventarios.png",
-        "link": "https://www.lamela.com/proyectos/contact-center-para-banco-santander/",
+        "link": "https://player.cloudinary.com/embed/?cloud_name=fher4729rangel&public_id=zgfosavxkjqolkccaxhp&profile=cld-default",
         "tags": [
             "PHP",
             "JavaScript",
