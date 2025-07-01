@@ -57,6 +57,19 @@
         "tags": [
             "PHP",
             "JavaScript",
+            "Laravel",
+            "Bootstrap"
+        ]
+    },
+    {
+        "title": "Desarrollo de Backend para App de EUT (Grupo Santander)",
+        "description": "Implementación de un sistema de backend para las aplicaciónes de EUT, utilizando PHP y MySQL.",
+        "image": "/imgs/capturaPantallaBackend.png",
+        "link": "https://player.cloudinary.com/embed/?cloud_name=fher4729rangel&public_id=uto8te9a6vl7mpwimstw&profile=cld-default",
+        "tags": [
+            "PHP",
+            "Laravel",
+            "Apache",
             "Mysql"
         ]
     }

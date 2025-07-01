@@ -26,6 +26,8 @@ const { title, description, image, link = '', tags = [] }: Props = Astro.props;
 			link && (
 				<a
 					href={link}
+					target='_blank'
+					rel='noopener noreferrer'
 					class='block w-full mx-0 sm:inline-flex sm:w-auto sm:mx-auto items-center px-3 py-2 text-sm font-medium text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800 m-4'>
 					Visit website
 				</a>
@@ -36,6 +38,3 @@ const { title, description, image, link = '', tags = [] }: Props = Astro.props;
 		</div>
 	</div>
 </div>
-
-
-
