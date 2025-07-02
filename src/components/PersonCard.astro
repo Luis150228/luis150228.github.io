@@ -4,6 +4,7 @@ import Mail from './icons/Mail.astro';
 import NameDev from './NameDev.astro';
 import SocialNetwork from './SocialNetwork.astro';
 import imageDev from '../assets/images/FherYellow3_4.png';
+import DescriptionText from './DescriptionShort.tsx';
 ---
 
 <div class='card-section'>
@@ -18,13 +19,16 @@ import imageDev from '../assets/images/FherYellow3_4.png';
 
 		<div class='grow'>
 			<NameDev class='h-12' />
-			<p class='text-m'>Web designer/developer, administrative manager</p>
+			<DescriptionText client:load />
 		</div>
 	</div>
 	<div class='mt-8'>
 		<p class='text-sm'>
-			Más de 10 años de experiencia en tecnologías de la información, especializado en la creación de herramientas
-			internas que automatizan procesos, análisis de datos operativos para facilitar la toma de decisiones.
+			Soy Fullstack Web Developer con más de 10 años de experiencia entecnologías de la información. Me especializo en
+			crear herramientas internas que automatizan procesos, optimizan tareas operativas y facilitan la toma de
+			decisiones. He trabajado tanto en backend con PHP/MySQL como en frontend moderno con React, Astro y Tailwind,
+			enfocándome siempre en soluciones prácticas para equipos técnicos y administrativos. También cuento con
+			experiencia en gestión y conozco bien el funcionamiento interno de las empresas.
 		</p>
 		<ul class='mt-5 gap-3 flex flex-col items-center xl:flex-row xl:gap-x-5'>
 			<li>
