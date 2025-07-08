@@ -24,6 +24,17 @@
         ]
     },
     {
+        "title": "Consulta de Usuarios",
+        "description": "Proyecto de consulta de usuarios utilizando React, Tailwind CSS y Vite.",
+        "image": "/imgs/capturaPantallaConsultaUsuarios.jpg",
+        "link": "https://luis150228.github.io/users-random-table/",
+        "tags": [
+            "Vite",
+            "Typescript",
+            "JavaScript"
+        ]
+    },
+    {
         "title": "Administrador de Reportes para EUT (Grupo Santander)",
         "description": "Sistema para generar reportes de forma automatica para EUT (Grupo Santander) SDK y CAU. Backend en PHP y Laravel, Frontend en JavaScript y Bootstrap, base de datos MySQL.",
         "image": "/imgs/capturaPantallaReportes.png",
